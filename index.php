@@ -1,5 +1,6 @@
 <?php
     $library = "library";
+    $static = "__static__";
 
     $request = strtok($_SERVER["REQUEST_URI"], '?');
 

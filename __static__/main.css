@@ -2,9 +2,10 @@
 {
     --color-bg: #F2F2F2;
     --color-text: #0D0D0D;
-    --color-border: #a2a9b1;
+    --color-border: #1A1A1A50;
     --color-block-bg: #E5E5E5;
-    --color-link: #1964b4;
+    --color-link: #2462f0;
+    --color-external-link: #2462f0;
 }
 
 body
@@ -12,8 +13,8 @@ body
     margin: 0;
     padding: 0;
 
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;  
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;  
     line-height: 1.6;
     
     background-color: var(--color-bg);
@@ -22,9 +23,9 @@ body
 
 main
 {
-    max-width: 750px;
+    max-width: 1024px;
     margin: 1em auto;
-    padding: 1em;
+    padding: 0 1em;
 
     background-color: var(--color-bg);
 }
@@ -36,6 +37,15 @@ h1, h2, h3, h4, h5, h6
 
     font-weight: normal;
 }
+
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.15em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.9em; }
+h6 { font-size: 0.8em; }
+
+p { margin: 0 0 1em 0; }
 
 hr
 {
@@ -106,8 +116,19 @@ a:hover
 {
     text-decoration: underline;
 }
+a[href^="http"]
+{
+    color: var(--color-external-link);
+}
+a[href^="http"]::after
+{
+    font-size: 0.75em;
+    margin-left: 0.2em;
+    vertical-align: super;
+    content: "[E]";
+}
 
-@media (max-width: calc(750px + 4em + 2px))
+@media (max-width: calc(1024px + 4em + 2px))
 {
     main
     {

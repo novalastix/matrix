@@ -1,6 +1,7 @@
 <?php
     $library = "library";
     $static = "__static__";
+    $title = "Example Markdown Site"; // Default title for the site
 
     $request = strtok($_SERVER["REQUEST_URI"], '?');
 

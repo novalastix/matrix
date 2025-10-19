@@ -16,6 +16,7 @@ body
     font-family: "Open Sans", sans-serif;
     font-size: 18px;  
     line-height: 1.6;
+    font-weight: 400;
     
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -32,10 +33,9 @@ main
 
 h1, h2, h3, h4, h5, h6
 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
+    margin: 0;
 
-    font-weight: normal;
+    font-weight: 500;
 }
 
 h1 { font-size: 1.5em; }
@@ -53,6 +53,11 @@ hr
     border: 0;
     
     background: var(--color-border);
+}
+
+strong
+{
+    font-weight: 700;
 }
 
 blockquote

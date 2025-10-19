@@ -24,8 +24,16 @@
 
         //TODO: Support other file extensions (e.g. .txt, .png, .jpg, etc.)
 
+        //Serve code related files
+        $codeWhitelist = ['js'];
+        if (file_exists($file) && in_array(pathinfo($file,PATHINFO_EXTENSION), $codeWhitelist) && !is_dir($file))
+        {
+            include 'templates/code.php';
+            exit();
+        }
+    
         // Serve static files directly
-        $staticBlacklist = ['php', 'htaccess', 'md']; // Never serve these file types directly
+        $staticBlacklist = ['', 'php', 'htaccess', 'md']; // Never serve these file types directly 
         if (file_exists($file) && !in_array(pathinfo($file, PATHINFO_EXTENSION), $staticBlacklist) && !is_dir($file))
         {
             $mimeType = mime_content_type($file);
